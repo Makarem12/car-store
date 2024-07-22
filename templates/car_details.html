@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Car Details Page</h1>
+    <h2>Model: {{ car.model }}</h2>
+    <p>Brand: {{ car.brand }}</p>
+    <p>Price: {{ car.price }}</p>
+    <p>Is_bought: {{ car.is_bought }}</p>
+    <p>Buyer: {{ car.buyer_id }}</p>
+    <p>Buy Time: {{ car.buy_time }}</p>
+
+    <button><a href={% url 'car_update' car.pk %}>Update</a></button>
+    <button><a href={% url 'car_delete' car.pk %}>Delete</a></button>
+
+
+
+{% endblock content %}

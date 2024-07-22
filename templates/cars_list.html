@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Cars List</h1>
+<button><a href="{% url 'create_car'%}">Create</a></button>
+
+
+{%for car in cars_objs %}
+
+    <h3>Model: {{ car.model }}</a><br>
+        Brand: {{ car.brand }}</a>
+    </h3>
+    <button><a href="{% url 'car_details' car.pk %}">Details</a></button>
+
+    {% endfor%}
+
+{% endblock content %}
